@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CnC OOD Detection</title>
+    <meta name="author" content="Jatin Prakash">
+    <meta name="description" content="Website for the paper CnC OOD Detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="icon" type="image/png" href="cvpr.png">  -->
+
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                A Novel Data Augmentation Technique for Out-of-Distribution Sample Detection using CompouNded Corruptions <br/> 
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.linkedin.com/in/ramya-hebbalaguppe-620b272/">
+                            Ramya Hebbalaguppe
+                        </a>
+
+                        <br /> IIT Delhi & TCS Research
+                    </li>
+
+                    <li>
+                        <a>
+                            Soumya Ghosal
+                        </a>
+
+                        <br /> TCS Research
+                    </li>
+
+                    <li>
+                        <a >
+                            Jatin Prakash
+                        </a>
+
+                        <br /> IIT Delhi
+                    </li>
+                    <li>
+                        <a >
+                            Harshad Khadilkar
+                        </a>
+
+                        <br /> TCS Research
+                    </li>
+                    <li>
+                        <a >
+                            Chetan Arora
+                        </a>
+
+                        <br /> IIT Delhi
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+                Some more comments
+            </div>
+        </div> -->
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="cnc_paper.pdf">
+                            <img src="paper_front.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/cnc-ood/cnc_ood">
+                            <img src="github_icon.png" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Example Results
+                </h3>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="lighthouse_results.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+           <table>
+           <tr>
+               <td><img src="abstract_pic.png" height="" width="720"  align="center"></td>
+           </tr>
+
+
+                </table>
+
+          </div>
+        </div>
+
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                   Abstract 
+                </h3>
+                <p>
+                    Modern deep neural network models are known to erroneously classify
+out-of-distribution (OOD) test data into one of the in-distribution (ID) training
+classes with high confidence. This can have disastrous consequences for safety-critical applications. A popular mitigation strategy is to train a separate classifier
+that can detect such OOD samples at the test time. In most practical settings
+OOD examples are not known at the train time, and hence a key question is how
+to augment the ID data with synthetic OOD samples for training such an OOD
+detector. In this paper, we propose a novel Compounded Corruption technique
+for the OOD data augmentation. One of the major advantages of our technique,
+named CnC, is that it does not require any hold-out data apart from the training set.
+Further, unlike current state-of-the-art (SOTA) techniques, CnC does not require
+backpropagation or ensembling at the test time, making our method much faster at
+inference. Our extensive comparison with 20 methods from the major conferences
+in last 4 years show that a model trained using CnC based data augmentation,
+significantly outperforms SOTA, both in terms of OOD detection accuracy as well
+as inference time. We include a detailed post-hoc analysis to investigate the reasons
+for the success of our method and identify higher relative entropy and diversity
+of CnC samples as probable causes. We also provide useful insights via a piecewise decomposition analysis on a two-dimensional dataset to reveal (visually and
+quantitatively) that our approach leads to a tighter boundary around ID classes,
+leading to better detection of OOD samples. The source-code of our work can be
+found at: https://github.com/cnc-ood.
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                  Files
+                </h3>
+                <li> Paper (<a href="cnc_paper.pdf">pdf</a>) </li>
+                <li> Supplementary (<a href="cnc_suppl.pdf">pdf</a>) </li>
+            </div>
+        </div>
+
+
+        <!-- ##### Motivation & Key idea #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+               Visualisation on Toy Data
+              </h3>
+              <p class="text-justify">
+              </p>
+        </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <p>We see the comparison of various competing data augmentation methods.</p>
+           <img src="toy_comparison.png"  height="" width="600" align="center">
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+               Some heading
+              </h3>
+              <p class="text-justify">
+
+                Helloo asodasodas
+
+              </p>
+        </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
